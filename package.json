@@ -1,0 +1,46 @@
+{
+  "name": "modularizer",
+  "version": "1.0.0",
+  "description": "CLI para gerar módulos Angular com estrutura customizada",
+  "main": "modularizer.js",
+  "bin": {
+    "ngm": "./modularizer.js"
+  },
+  "scripts": {
+    "start": "node modularizer.js",
+    "dev": "nodemon modularizer.js",
+    "build": "echo 'Build não necessário para CLI Node.js'",
+    "test": "echo 'Testes serão implementados futuramente'"
+  },
+  "keywords": [
+    "angular",
+    "cli",
+    "generator",
+    "module",
+    "scaffold",
+    "typescript"
+  ],
+  "author": "Samuel Antony <antony.cozmo@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "inquirer": "^8.2.6",
+    "ora": "^5.4.1",
+    "boxen": "^5.1.2",
+    "figlet": "^1.7.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bethecozmo/modularizer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bethecozmo/modularizer/issues"
+  },
+  "homepage": "https://github.com/bethecozmo/modularizer#readme"
+}
