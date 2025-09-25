@@ -1,6 +1,6 @@
 {
   "name": "modularizer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "CLI para gerar módulos Angular com estrutura customizada",
   "main": "modularizer.js",
   "bin": {
