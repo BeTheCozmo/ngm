@@ -1,10 +1,10 @@
 {
-  "name": "modularizer",
+  "name": "@bethecozmo/modularizer",
   "version": "1.0.1",
   "description": "CLI para gerar módulos Angular com estrutura customizada",
   "main": "modularizer.js",
   "bin": {
-    "ngm": "./modularizer.js"
+    "modularizer": "./modularizer.js"
   },
   "scripts": {
     "start": "node modularizer.js",
