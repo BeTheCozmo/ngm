@@ -1,14 +1,14 @@
 {
-  "name": "@bethecozmo/modularizer",
+  "name": "@bethecozmo/ngm",
   "version": "1.0.2",
   "description": "CLI para gerar módulos Angular com estrutura customizada",
-  "main": "modularizer.js",
+  "main": "ngm.js",
   "bin": {
-    "modularizer": "./modularizer.js"
+    "ngm": "./ngm.js"
   },
   "scripts": {
-    "start": "node modularizer.js",
-    "dev": "nodemon modularizer.js",
+    "start": "node ngm.js",
+    "dev": "nodemon ngm.js",
     "build": "echo 'Build não necessário para CLI Node.js'",
     "test": "echo 'Testes serão implementados futuramente'"
   },
@@ -37,10 +37,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/bethecozmo/modularizer.git"
+    "url": "https://github.com/bethecozmo/ngm.git"
   },
   "bugs": {
-    "url": "https://github.com/bethecozmo/modularizer/issues"
+    "url": "https://github.com/bethecozmo/ngm/issues"
   },
-  "homepage": "https://github.com/bethecozmo/modularizer#readme"
+  "homepage": "https://github.com/bethecozmo/ngm#readme"
 }

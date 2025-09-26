@@ -19,14 +19,15 @@ class AngularModuleGenerator {
   // Exibe o banner inicial
   showBanner() {
     console.clear();
-    const title = figlet.textSync('modularizer', {
+    console.log();
+    const title = figlet.textSync('ngm', {
       font: 'ANSI Shadow',
       horizontalLayout: 'default',
       verticalLayout: 'default'
     });
 
     console.log(chalk.cyan(title));
-    console.log(chalk.gray('Angular Module Generator - Versão 1.0.0'));
+    console.log(chalk.gray('Angular Module Generator'));
     console.log(chalk.gray('━'.repeat(50)));
     console.log();
   }
