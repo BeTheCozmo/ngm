@@ -1,6 +1,6 @@
-# Modularizer CLI
+# NGM CLI
 
-Uma interface de linha de comando (CLI) poderosa para gerar módulos Angular padronizados e modulares. O `Modularizer` simplifica a criação de módulos Angular com uma estrutura consistente, incluindo serviços, guards, layouts e models, promovendo modularidade e reutilização de código em projetos Angular.
+Uma interface de linha de comando (CLI) poderosa para gerar módulos Angular padronizados e modulares. O `NGM` simplifica a criação de módulos Angular com uma estrutura consistente, incluindo serviços, guards, layouts e models, promovendo modularidade e reutilização de código em projetos Angular.
 
 ## Funcionalidades
 
@@ -14,7 +14,7 @@ Uma interface de linha de comando (CLI) poderosa para gerar módulos Angular pad
 
 ## Propósito
 
-O `Modularizer` foi projetado para:
+O `NGM` foi projetado para:
 - **Padronizar a Estrutura de Módulos**: Garante que todos os módulos Angular sigam uma convenção consistente, facilitando a manutenção e escalabilidade.
 - **Promover Modularidade**: Organiza o código em pastas específicas (`services`, `layouts`, `components`, `models`), incentivando a separação de responsabilidades.
 - **Acelerar o Desenvolvimento**: Automatiza a criação de boilerplate, reduzindo o tempo gasto em configurações manuais.
@@ -29,27 +29,27 @@ O `Modularizer` foi projetado para:
 
 ## Instalação
 
-Instale o `Modularizer` globalmente via npm:
+Instale o `NGM` globalmente via npm:
 
 ```bash
-npm install -g @bethecozmo/modularizer
+npm install -g @bethecozmo/ngm
 ```
 
-Isso registra o comando `modularizer` para uso em qualquer diretório.
+Isso registra o comando `ngm` para uso em qualquer diretório.
 
 ## Configuração
 
-Certifique-se de estar na raiz de um projeto Angular (onde existe o arquivo `angular.json`). O `Modularizer` valida automaticamente a presença do projeto Angular antes de executar.
+Certifique-se de estar na raiz de um projeto Angular (onde existe o arquivo `angular.json`). O `NGM` valida automaticamente a presença do projeto Angular antes de executar.
 
 Se desejar personalizar a estrutura de diretórios ou templates, você pode contribuir com o projeto (veja [Contribuindo](#contribuindo)).
 
 ## Comandos
 
 ```bash
-modularizer
+ngm
 ```
 
-Executar o comando `modularizer` inicia o processo interativo, que inclui:
+Executar o comando `ngm` inicia o processo interativo, que inclui:
 
 1. **Validação do Projeto**: Verifica se você está em um projeto Angular.
 2. **Prompts Interativos**: Solicita o nome do módulo e opções para gerar:
@@ -67,13 +67,13 @@ Executar o comando `modularizer` inicia o processo interativo, que inclui:
    ```
 4. **Resumo Final**: Exibe um resumo dos arquivos gerados e próximos passos.
 
-Use `modularizer --help` para mais detalhes (futuro suporte planejado).
+Use `ngm --help` para mais detalhes (futuro suporte planejado).
 
 ## Exemplo de Uso
 
-1. **Iniciar o Modularizer**:
+1. **Iniciar o NGM**:
    ```bash
-   modularizer
+   ngm
    ```
 
 2. **Responda aos Prompts**:
@@ -154,6 +154,30 @@ src/app/<module-name>/
 - **Models**: Interfaces TypeScript para tipagem de dados (create, update, response, list).
 - **Components**: Diretório vazio para adicionar componentes manualmente.
 
+## Integração com Modula
+
+Para maximizar a reutilização de módulos e boilerplates, recomendamos usar o `NGM` em conjunto com o [**Modula CLI**](https://github.com/BeTheCozmo/modula). O `modula` é uma ferramenta poderosa que permite gerenciar módulos programáticos em um servidor centralizado, possibilitando:
+
+- **Upload de Módulos Gerados**: Após criar um módulo com o `NGM`, use o comando `modula upload ./src/app/<module-name>` para enviar o módulo ao servidor Modula, tornando-o disponível para outros projetos ou desenvolvedores.
+- **Download de Módulos Existentes**: Baixe módulos pré-existentes do servidor Modula com `modula download <id>` para reutilizar boilerplates ou estruturas completas em novos projetos Angular.
+- **Gerenciamento Centralizado**: Liste (`modula list`), visualize (`modula view <id>`) ou exclua (`modula delete <id>`) módulos diretamente do servidor, facilitando o compartilhamento entre equipes.
+
+**Exemplo de Fluxo Integrado**:
+1. Crie um módulo com o `NGM`:
+   ```bash
+   ngm
+   ```
+2. Envie o módulo para o servidor Modula:
+   ```bash
+   modula upload ./src/app/meu-modulo
+   ```
+3. Em outro projeto, baixe e reutilize o módulo:
+   ```bash
+   modula download <module-id>
+   ```
+
+Essa integração combina a geração local de módulos padronizados do `NGM` com o gerenciamento e compartilhamento remoto do `Modula`, criando um fluxo eficiente para desenvolvedores que buscam modularidade e reutilização em escala.
+
 ## Notas
 
 - **Validação**: O comando só funciona na raiz de um projeto Angular (com `angular.json` e `src/app`).
@@ -166,8 +190,8 @@ src/app/<module-name>/
   - Verifique se você está no diretório correto do projeto Angular.
   - Confirme a presença de `angular.json` e `src/app`.
 
-- **Erro: "command not found: modularizer"**:
-  - Instale globalmente com `npm install -g @bethecozmo/modularizer`.
+- **Erro: "command not found: ngm"**:
+  - Instale globalmente com `npm install -g @bethecozmo/ngm`.
   - Verifique se o npm global está no PATH: `npm bin -g`.
 
 - **Erro ao executar `ng generate`**:
@@ -185,14 +209,14 @@ src/app/<module-name>/
    ```bash
    npm publish --access public
    ```
-   - Nota: Use um nome único ou escopo (ex.: `@seu-nome/modularizer`) para evitar conflitos.
+   - Nota: Use um nome único ou escopo (ex.: `@seu-nome/ngm`) para evitar conflitos.
 
 ## Contribuindo
 
 Sinta-se à vontade para abrir *issues* ou *pull requests* no repositório oficial. Sugestões de melhorias incluem:
 - Suporte para geração de módulos de roteamento.
 - Opção para incluir testes unitários.
-- Configuração via arquivo `.modularizer.config.json`.
+- Configuração via arquivo `.ngm.config.json`.
 
 Para feedback, entre em contato com a equipe de desenvolvimento.
 
